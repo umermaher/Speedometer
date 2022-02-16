@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Speed: 0 m/s"
+        android:id="@+id/speed"
+        android:textColor="#000"
+        android:textSize="25sp"
+        android:layout_above="@+id/distance"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+         />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Distance: 0 m"
+        android:id="@+id/distance"
+        android:textSize="25sp"
+        android:layout_centerInParent="true"
+        android:textColor="@color/black"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time: 00:00:00"
+        android:id="@+id/time"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/distance"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="2">
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/start_pause_btn"
+        android:text="START"/>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_metric_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/start_pause_btn"
+        android:text="Metric Units" />
+    </LinearLayout>
+</RelativeLayout>
